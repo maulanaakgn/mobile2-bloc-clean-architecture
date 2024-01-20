@@ -31,31 +31,31 @@ class _ProfilePageState extends State<ProfilePage> {
 
   CircleAvatar _avatar() {
     return const CircleAvatar(
-            radius: 75,
-            backgroundImage: NetworkImage(
-              'https://i.ytimg.com/vi/GdPEHKnGrdA/maxresdefault.jpg',
-            ),
-          );
+      radius: 75,
+      backgroundImage: NetworkImage(
+        'https://i.ytimg.com/vi/GdPEHKnGrdA/maxresdefault.jpg',
+      ),
+    );
   }
 
   Text _nama() {
     return Text(
-          'Azki Maulana Assariy',
-          style: kBlackTextStyle.copyWith(fontSize: 18,),
-                      );
+      'Azki Maulana Assariy',
+      style: kBlackTextStyle.copyWith(fontSize: 18,),
+    );
   }
 
   Text _nim() {
     return Text(
-          '21552011144',
-          style: kBlackTextStyle.copyWith(fontSize: 18,),
-                      );
+      '21552011144',
+      style: kBlackTextStyle.copyWith(fontSize: 18,),
+    );
   }
 
   Text _kelas() {
     return Text(
-          'TIF 221B',
-          style: kBlackTextStyle.copyWith(fontSize: 18,),
-                      );
+      'TIF 221B',
+      style: kBlackTextStyle.copyWith(fontSize: 18,),
+    );
   }
 }
