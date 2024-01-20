@@ -15,7 +15,7 @@ class FruitRepositoryImpl extends FruitRepositoryD {
           await remoteDataSource.getFruits();
       return fruitData.map((data) => FruitModel.fromJson(data)).toList();
     } catch (error) {
-      throw Exception('Failed to get fruits');
+      throw Exception(error);
     }
   }
 
@@ -24,7 +24,7 @@ class FruitRepositoryImpl extends FruitRepositoryD {
     try {
       await remoteDataSource.updateFruit(updatedFruit);
     } catch (error) {
-      throw Exception('Failed to update fruit: $error');
+      throw Exception(error);
     }
   }
 
@@ -33,7 +33,7 @@ class FruitRepositoryImpl extends FruitRepositoryD {
     try {
       await remoteDataSource.addFruit(newFruit);
     } catch (error) {
-      throw Exception('Failed to add new fruit: $error');
+      throw Exception(error);
     }
   }
 
@@ -42,7 +42,7 @@ class FruitRepositoryImpl extends FruitRepositoryD {
     try {
       await remoteDataSource.deleteFruit(id);
     } catch (error) {
-      throw Exception('Failed to delete fruit: $error');
+      throw Exception(error);
     }
   }
 }
