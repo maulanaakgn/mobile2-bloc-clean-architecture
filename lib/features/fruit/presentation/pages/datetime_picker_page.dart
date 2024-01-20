@@ -67,111 +67,111 @@ class _DateTimePickerPageState extends State<DateTimePickerPage> {
 
   Container _timeContainer(BuildContext context) {
     return Container(
-          height: MediaQuery.of(context).size.height * 1 / 4,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: kWhiteGreyColor,
-            borderRadius: BorderRadius.circular(defaultRadius),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              _time(context),
-              _buttonShowTime(context),
-            ],
-          ),
-        );
+      height: MediaQuery.of(context).size.height * 1 / 4,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: kWhiteGreyColor,
+        borderRadius: BorderRadius.circular(defaultRadius),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _time(context),
+          _buttonShowTime(context),
+        ],
+      ),
+    );
   }
 
   RichText _time(BuildContext context) {
     return RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Selected Time: \n',
-                      style: kBlackTextStyle.copyWith(
-                        fontSize: 20,
-                      ),
-                    ),
-                    TextSpan(
-                      text: _selectedTime.format(context),
-                      style: kBlackTextStyle.copyWith(
-                        fontSize: 40,
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-              );
+      textAlign: TextAlign.center,
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: 'Selected Time: \n',
+            style: kBlackTextStyle.copyWith(
+              fontSize: 20,
+            ),
+          ),
+          TextSpan(
+            text: _selectedTime.format(context),
+            style: kBlackTextStyle.copyWith(
+              fontSize: 40,
+              fontWeight: bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   ElevatedButton _buttonShowTime(BuildContext context) {
     return ElevatedButton(
-                onPressed: () => _showTime(context),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: kBlackColor,
-                ),
-                child: Text(
-                  'Pick Time',
-                  style: kWhiteTextStyle,
-                ),
-              );
+      onPressed: () => _showTime(context),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: kBlackColor,
+      ),
+      child: Text(
+        'Pick Time',
+        style: kWhiteTextStyle,
+      ),
+    );
   }
 
   Container _dateContainer(BuildContext context) {
     return Container(
-          height: MediaQuery.of(context).size.height * 1 / 4,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: kWhiteGreyColor,
-            borderRadius: BorderRadius.circular(defaultRadius),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              _date(),
-              _buttonShowDate(context),
-            ],
-          ),
-        );
+      height: MediaQuery.of(context).size.height * 1 / 4,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: kWhiteGreyColor,
+        borderRadius: BorderRadius.circular(defaultRadius),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _date(),
+          _buttonShowDate(context),
+        ],
+      ),
+    );
   }
 
   RichText _date() {
     return RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Selected Date: \n',
-                      style: kBlackTextStyle.copyWith(
-                        fontSize: 20,
-                      ),
-                    ),
-                    TextSpan(
-                      text: _dateFormat.format(_selectedDate),
-                      style: kBlackTextStyle.copyWith(
-                        fontSize: 40,
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-              );
+      textAlign: TextAlign.center,
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: 'Selected Date: \n',
+            style: kBlackTextStyle.copyWith(
+              fontSize: 20,
+            ),
+          ),
+          TextSpan(
+            text: _dateFormat.format(_selectedDate),
+            style: kBlackTextStyle.copyWith(
+              fontSize: 40,
+              fontWeight: bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   ElevatedButton _buttonShowDate(BuildContext context) {
     return ElevatedButton(
-                onPressed: () => _showDate(context),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: kBlackColor,
-                ),
-                child: Text(
-                  'Pick Date',
-                  style: kWhiteTextStyle,
-                ),
-              );
+      onPressed: () => _showDate(context),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: kBlackColor,
+      ),
+      child: Text(
+        'Pick Date',
+        style: kWhiteTextStyle,
+      ),
+    );
   }
 }
