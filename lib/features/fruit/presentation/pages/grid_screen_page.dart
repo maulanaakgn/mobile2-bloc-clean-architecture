@@ -34,25 +34,25 @@ class _GridScreenPageState extends State<GridScreenPage> {
 
   Container _imageContainer(List<String> fruitImageUrls, int index) {
     return Container(
-          margin: const EdgeInsets.all(8.0),
-          decoration: BoxDecoration(
-            color: kWhiteGreyColor,
-            borderRadius: BorderRadius.circular(
-              defaultRadius,
-            ),
-          ),
-          child: _image(fruitImageUrls, index),
-        );
+      margin: const EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: kWhiteGreyColor,
+        borderRadius: BorderRadius.circular(
+          defaultRadius,
+        ),
+      ),
+      child: _image(fruitImageUrls, index),
+    );
   }
 
   Center _image(List<String> fruitImageUrls, int index) {
     return Center(
-            child: Image.network(
-              fruitImageUrls[index],
-              width: 160.0,
-              height: 160.0,
-              fit: BoxFit.cover,
-            ),
-          );
+      child: Image.network(
+        fruitImageUrls[index],
+        width: 160.0,
+        height: 160.0,
+        fit: BoxFit.cover,
+      ),
+    );
   }
 }
