@@ -164,9 +164,9 @@ class _FruitListPageState extends State<FruitListPage> {
                 ),
               ),
           separatorBuilder: (context, index) => const SizedBox(
-                height: 10,
-              ),
-          itemCount: state.fruits.length),
+            height: 10,
+          ),
+      itemCount: state.fruits.length),
     );
   }
 
